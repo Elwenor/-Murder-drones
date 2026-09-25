@@ -1,8 +1,17 @@
-![Murder Drones banner](assets/banner.png)
+<p align="center">
+  <img src="assets/banner.png" alt="Murder Drones Multimodal Dataset" width="100%">
+</p>
 
 # Murder Drones — Multimodal Timeline Dataset
 
-Private work-in-progress dataset containing temporally aligned multimodal annotations for ***Murder Drones*** episodes.
+A manually built and manually validated **Murder Drones multimodal dataset** containing timestamped dialogue, visual events, character presence, audio information, scene context, interpretation and audiovisual verification.
+
+The project is designed as a reusable source for **machine learning, fine-tuning, multimodal research, video understanding, audiovisual analysis, transcript analysis and structured episode research**.
+
+![Schema](https://img.shields.io/badge/schema-v3.0-blue)
+![Format](https://img.shields.io/badge/format-JSONL-lightgrey)
+![Status](https://img.shields.io/badge/status-in%20development-orange)
+![Type](https://img.shields.io/badge/type-multimodal%20dataset-purple)
 
 > [!NOTE]
 > **Manually built and manually validated master dataset.** Designed as a reusable source for **fine-tuning, audiovisual analysis, structured episode research and text/Markdown representations of *Murder Drones*.**
@@ -13,10 +22,11 @@ Private work-in-progress dataset containing temporally aligned multimodal annota
 ## Development & release status
 
 > [!IMPORTANT]
-> **This dataset is still under active development and is not yet released on GitHub.**
-> The current working dataset is maintained **only in the Hugging Face version**, where annotation, validation and schema work continue.
+> **This dataset is still under active development and has not yet been released on GitHub.**
 >
-> This GitHub repository currently serves as the **project and documentation repository**. A dataset release will be published here **only after the planned annotation work is complete and the dataset is ready for release**. Until then, examples shown below are provided only to document the structure and current annotation format.
+> The complete working dataset currently exists **only in the Hugging Face version**, where annotation, manual audiovisual validation and schema development continue.
+>
+> This GitHub repository currently serves as the **public project, documentation and dataset-preview repository**. The full dataset will be published here **only after the planned annotation work is complete and the dataset is ready for release**. Until then, the records shown below are examples of the current development format rather than a complete downloadable dataset.
 
 ## Dataset sample
 
@@ -29,6 +39,29 @@ The dataset is stored as structured JSONL records. The following two records are
 
 > [!NOTE]
 > This sample reflects the **current development schema** and may still change before the final dataset release.
+
+## Discoverability keywords
+
+`Murder Drones` · `Murder Drones dataset` · `multimodal dataset` · `video dataset` · `video annotation` · `audiovisual dataset` · `dialogue dataset` · `timeline annotation` · `scene understanding` · `JSONL` · `machine learning` · `fine-tuning` · `computer vision` · `NLP`
+
+Unlike most *Murder Drones* repositories centered on fan games, models, textures or character assets, this project focuses on **structured audiovisual annotation data** intended for machine-learning, research and downstream dataset-generation workflows.
+
+### Suggested GitHub topics
+
+```text
+murder-drones
+murder-drones-dataset
+multimodal-dataset
+video-annotation
+audiovisual
+jsonl
+machine-learning
+fine-tuning
+dialogue-dataset
+scene-understanding
+computer-vision
+nlp
+```
 
 ## Dataset status
 
@@ -293,22 +326,50 @@ The repository is primarily intended to contain independently produced annotatio
 ## Repository structure
 
 ```text
-Murder-drones/
+Murder-Drones-Multimodal-Dataset/
 ├── README.md
+├── LICENSE
+├── CITATION.cff
 ├── metadata/
-│   ├── episodes.jsonl
+│   ├── episodes.json
+│   ├── characters.json
 │   └── schema.md
 ├── data/
+│   ├── S01E01/
+│   ├── S01E02/
+│   ├── S01E03/
 │   └── S01E04/
 │       ├── metadata.json
 │       └── events.jsonl
 ├── assets/
-│   ├── cover.png
 │   ├── banner.png
+│   ├── cover.png
 │   └── S01E04/
 │       ├── preview.png
 │       └── keyframes/
-└── notes/
-    ├── annotation_guidelines.md
-    └── known_ambiguities.md
+└── docs/
+    ├── annotation-guidelines.md
+    ├── schema.md
+    └── known-ambiguities.md
 ```
+
+## Naming conventions
+
+- Project name in prose: **Murder Drones**
+- Repository name: `Murder-Drones-Multimodal-Dataset`
+- GitHub topic / slug style: `murder-drones`
+- Episode identifiers: `S01E01` … `S01E08`
+- Record identifiers: `S01E04_evt_0041`
+- Episode asset directories: `assets/S01E04/`
+- Documentation filenames: kebab-case, e.g. `annotation-guidelines.md`
+- Dataset records: JSONL, e.g. `events.jsonl`
+
+## GitHub metadata recommendation
+
+**Repository description**
+
+> Manually annotated multimodal Murder Drones dataset with timestamped dialogue, visual events, audio, character presence and audiovisual validation.
+
+**Recommended repository name**
+
+`Murder-Drones-Multimodal-Dataset`
